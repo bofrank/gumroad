@@ -1,0 +1,29 @@
+<script type="text/javascript">
+
+
+//*****************************//
+//
+//   Requires button field and link field values to create a button that displays a shadow box containing the Gumroad item to buy.
+//
+//*****************************//
+
+
+$(document).ready(function() {
+  // Handler for .ready() called.
+
+
+	var buttonLabel = $("ul.post-meta").children().eq(0).text();
+	var buttonValue = buttonLabel.split(":").pop().trim();
+	
+	var linkLabel = $("ul.post-meta").children().eq(1).text();
+	var linkValue = linkLabel.split(":").pop().trim();
+	
+	$("div.entry-content").append("<script type='text/javascript' src='https://gumroad.com/js/gumroad.js'></ script>");
+	
+	$("div.entry-content").append("<a href='http:"+linkValue+"'><img class='aligncenter size-full wp-image-250' style='cursor: pointer;' alt='buy_now' src='http://www.annspiers.com/wp-content/uploads/2013/06/buy_now.png' /></ a>");
+
+
+});
+
+
+</script>
